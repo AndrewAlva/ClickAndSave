@@ -97,7 +97,77 @@ textarea {
 
 html, body{
     background-color: #fff;
+    font-family: 'Raleway', sans-serif;
 }
+
+/*///// BACKGROUND ANIMATIONS /////*/
+    #container{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        opacity: .2;
+        filter: alpha(opacity=20);
+    }
+
+    #bgsWrapper{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        z-index: 0;
+        overflow: hidden;
+    }
+
+    .layer {
+        position: absolute;
+        width: 200vw;
+        height: 100vh;
+    }
+
+    .innerLayer{
+        position: absolute;
+        width: 200vw;
+        height: 200vh;
+    }
+
+    .stars1{
+        background-image: url(../img/bg/lucky-stars.svg);
+        background-size: 50%;
+        background-repeat: repeat;
+
+        -webkit-transition: all 2.4s ease;
+           -moz-transition: all 2.4s ease;
+            -ms-transition: all 2.4s ease;
+             -o-transition: all 2.4s ease;
+                transition: all 2.4s ease;
+        
+    }
+
+    .stars2{
+        background-image: url(../img/bg/lucky-stars-1.svg);
+        background-size: 50%;
+        background-repeat: repeat;
+
+        -webkit-transition: all 2.8s ease;
+           -moz-transition: all 2.8s ease;
+            -ms-transition: all 2.8s ease;
+             -o-transition: all 2.8s ease;
+                transition: all 2.8s ease;
+    }
+    .stars3{
+        background-image: url(../img/bg/lucky-stars-2.svg);
+        background-size: 33.33%;
+        background-repeat: repeat;
+
+        -webkit-transition: all 3.4s ease;
+           -moz-transition: all 3.4s ease;
+            -ms-transition: all 3.4s ease;
+             -o-transition: all 3.4s ease;
+                transition: all 3.4s ease;
+    }
+/*///// END BACKGROUND ANIMATIONS /////*/
+
 
 /* /// MASTER WRAPPER ///*/
     #fullWrapper{
@@ -118,6 +188,7 @@ html, body{
             top: 0;
             left: 50px;
             cursor: pointer;
+            background-color: #E6545F;
         }
             #fullWrapper nav img{
                 width: 100%;
@@ -132,7 +203,7 @@ html, body{
                 font-size: 4em;
                 margin: auto;
                 top: 0; bottom: 0; left: 0; right: 0;
-                background-color: aqua;
+                /*border: 1px solid aqua;*/
             }
                 #centerQuotes .quotes{
                     display: block;
@@ -141,14 +212,78 @@ html, body{
                     text-align: center;
                     cursor: pointer;
                 }
+                    #centerQuotes .quotes .boldie{
+                        font-weight: 700 !important;
+                    }
+                #centerQuotes .firstQuote{
+                    display: block;
+                    margin: 0;
+                    line-height: 1em;
+                    text-align: center;
+                }
                 #centerQuotes .hiddenQuote{
                     display: none;
                 }
 
-                #centerQuotes h1, #centerQuotes p{
-                    font-size: 1em;
-                    font-weight: normal;
+                #centerQuotes h1, #centerQuotes div{
+                    font-size: 20px;
+                    font-weight: 500;
                 }
+
+                    #centerQuotes .quoteOptionsBox{
+                        position: relative;
+                        display: inline-block;
+                        vertical-align: top;
+                        zoom: 1; /* Fix for IE7 */
+                        *display: inline; /* Fix for IE7 */
+                        width: 100%;
+                        height: 2em;
+                        line-height: 2em;   
+                        top: 1em;
+                    }
+                        #centerQuotes .quoteOptionsBox .optionsBox{
+                            position: relative;
+                            display: inline-block;
+                            vertical-align: top;
+                            zoom: 1; /* Fix for IE7 */
+                            *display: inline; /* Fix for IE7 */
+                            float: left;
+                            cursor: pointer;
+                        }
+                        #centerQuotes .quoteOptionsBox .threeOptionsBox{
+                            width: 33.33%;
+                            height: 100%;
+                        }
+
+                            #centerQuotes .quoteOptionsBox .optionsBox .innerText{
+                                width: 70%;
+                                height: 100%;
+                                margin: auto;
+                                left: 0; right: 0;
+                                background-color: #0f1f27;
+                                color: #fff;
+
+                                -webkit-transition: all .2s ease-in-out;
+                                   -moz-transition: all .2s ease-in-out;
+                                    -ms-transition: all .2s ease-in-out;
+                                     -o-transition: all .2s ease-in-out;
+                                        transition: all .2s ease-in-out;
+                            }
+                            #centerQuotes .quoteOptionsBox .optionsBox .innerText:hover{
+                                background-color: #E6545F;
+                            }
+                        #centerQuotes .quoteOptionsBox img{
+                            position: absolute;
+                            margin: auto;
+                            left: 0; right: 0;
+                        }
+                            .loadingQuote{
+                                width: 50px;
+                            }
+                            .gifQuote{
+                                width: 380px;
+                            }
+
         /* END CENTER QUOTES STYLE */
 /* /// END MASTER ///*/
 
@@ -159,6 +294,29 @@ html, body{
             width: 50px;
             height: 84px;
             left: 20px;
+        }
+
+        #centerQuotes .quotes{
+            line-height: 1.2em;
+        }
+
+        #centerQuotes h1, #centerQuotes div{
+            font-size: 16px;
+        }
+
+        #centerQuotes .quoteOptionsBox{
+            height: 6em;
+            line-height: 1.8em;
+        }
+
+        #centerQuotes .quoteOptionsBox .threeOptionsBox{
+            width: 100%;
+            height: 30%;
+            margin-bottom: 5px;
+        }
+
+        .gifQuote{
+            width: 250px;
         }
     }
 /* /// END RESPONSIVE MASTER ///*/
