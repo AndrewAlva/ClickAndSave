@@ -1,7 +1,8 @@
 // START!
 	setTimeout(function(){
-		$('#agencyMails').focus();
-	},1000);
+		var inputMails = document.getElementById("agencyMails");
+		inputMails.focus();
+	},500);
 // END START
 
 jQuery(document).ready(function($) {
@@ -14,6 +15,7 @@ jQuery(document).ready(function($) {
 	// END RESTART
 
 
+
 	// NORMAL FLOW
 		$('.quotes').click(function() {
 			// quotesArray[0].remove();
@@ -21,8 +23,6 @@ jQuery(document).ready(function($) {
 			$('.quotes:first-child').removeClass('hiddenQuote');
 		});
 	// END NORMAL FLOW 
-
-
 
 	// FIRST DECISION INTERACTION
 		$(document).keyup(function(e) {
@@ -57,11 +57,20 @@ jQuery(document).ready(function($) {
 		});
 	// END SET TIMER
 
+	// SHIFT CENTER QUOTE WRAPPER SIZE
+		$('.toggleQuoteSize').click(function() {
+			$('#centerQuotes').toggleClass('extendedCenterQuote');
+		});
+	// END SHIFTING SIZE
+
+
+
+
+
+
 	// ABORT SITE
 		$('.quotes:last-child').click(function() {
 			window.location.href = 'https://vimeo.com/86358930';
 		});
 	// END ABORT
-
-
 });
