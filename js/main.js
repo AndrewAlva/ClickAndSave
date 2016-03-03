@@ -32,7 +32,7 @@ jQuery(document).ready(function($) {
 
 
 				if(howManyMails <= 10){
-					$('#quote1').prepend('Con que ' + howManyMails +' nada más eh? tal vez no debí mandarte esto a ti.');
+					$('#quote1').prepend('Con que ' + howManyMails +' nada más ¿eh? tal vez no debí mandarte esto a ti.');
 
 				} else if (howManyMails > 10 && howManyMails < 20){
 					$('#quote1').prepend('Claro, ya me imaginaba de 10 a 20, no está mal.');
