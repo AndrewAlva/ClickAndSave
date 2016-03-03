@@ -215,11 +215,11 @@ html, body{
                     text-align: center;
                     cursor: pointer;
                 }
-                    #centerQuotes .quotes .boldie{
+                    #centerQuotes .boldie{
                         font-weight: 700 !important;
                         color: #E6545F;
                     }
-                        #centerQuotes .quotes .boldie a{
+                        #centerQuotes .boldie a{
                             color: #E6545F;
                         }
 
