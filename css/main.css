@@ -322,6 +322,10 @@ html, body{
             left: 20px;
         }
 
+        .extendedCenterQuote{
+            height: 2.5em !important;
+        }
+
         #centerQuotes .quotes, #centerQuotes .specialQuote{
             line-height: 1.2em;
         }
